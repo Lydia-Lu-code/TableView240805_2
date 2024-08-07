@@ -142,10 +142,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         customStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            titleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            titleView.topAnchor.constraint(equalTo: view.topAnchor),
             titleView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             titleView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            titleView.heightAnchor.constraint(equalToConstant: 60),
+            titleView.heightAnchor.constraint(equalToConstant: 120),
             
             collectionView.topAnchor.constraint(equalTo: titleView.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -166,7 +166,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             backgroundView.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
             backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
 
         ])
     }

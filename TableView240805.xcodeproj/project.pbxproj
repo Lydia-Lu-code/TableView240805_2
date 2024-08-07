@@ -103,8 +103,8 @@
 				5C46FC092C60CD8B00950C64 /* TitleView.swift */,
 				5C46FC0B2C60E0D400950C64 /* CustomCollectionViewCell.swift */,
 				5C46FC142C61F2DD00950C64 /* CustomView.swift */,
-				5C46FBF92C60CCC700950C64 /* ViewController.swift */,
 				5C46FC162C63330C00950C64 /* BackgroundView.swift */,
+				5C46FBF92C60CCC700950C64 /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

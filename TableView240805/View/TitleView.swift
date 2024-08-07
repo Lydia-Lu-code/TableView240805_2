@@ -10,9 +10,13 @@ import UIKit
 class TitleView: UIView {
 
     let title: UILabel = {
-        var title = UILabel()
-        title.text = "Movies"
+        let title = UILabel()
+        title.text = "\n\nMovies" // 增加三个换行符
         title.translatesAutoresizingMaskIntoConstraints = false
+        title.textAlignment = .center
+        title.numberOfLines = 0 // 允许多行
+        title.lineBreakMode = .byWordWrapping // 自动换行
+        title.font = UIFont.systemFont(ofSize: 24) // 设置文字大小为16
         return title
     }()
     
