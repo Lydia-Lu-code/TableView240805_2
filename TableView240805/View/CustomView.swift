@@ -1,7 +1,7 @@
 import UIKit
 
 class CustomView: UIView {
-
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false

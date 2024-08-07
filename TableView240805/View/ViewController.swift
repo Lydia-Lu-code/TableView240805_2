@@ -30,17 +30,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         stackView.spacing = 8
         stackView.alignment = .top
         stackView.distribution = .equalSpacing
-        stackView.backgroundColor = .systemGreen
         return stackView
     }()
     
     private var selectedMovieType: MovieType?
+    var backgroundView = BackgroundView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setLayout()
         titleView.backgroundColor = UIColor.systemPink
+        backgroundView.backgroundColor = .systemGreen
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: "CustomCell")
@@ -127,12 +128,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func setLayout() {
         view.addSubview(titleView)
         view.addSubview(collectionView)
-        view.addSubview(scrollView)
         scrollView.addSubview(customStackView)
+        backgroundView.addSubview(scrollView)
+        view.addSubview(backgroundView)
+//        scrollView.sendSubviewToBack(backgroundView)
+        
+        
         
         titleView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
         customStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -155,7 +161,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             customStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             customStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             customStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            customStackView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
+            customStackView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
+            
+            backgroundView.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+
         ])
     }
     

@@ -18,6 +18,7 @@
 		5C46FC0E2C61EB8900950C64 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C46FC0D2C61EB8900950C64 /* MovieModel.swift */; };
 		5C46FC102C61EBA300950C64 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C46FC0F2C61EBA300950C64 /* MoviesViewModel.swift */; };
 		5C46FC152C61F2DD00950C64 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C46FC142C61F2DD00950C64 /* CustomView.swift */; };
+		5C46FC172C63330C00950C64 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C46FC162C63330C00950C64 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5C46FC0D2C61EB8900950C64 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		5C46FC0F2C61EBA300950C64 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		5C46FC142C61F2DD00950C64 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		5C46FC162C63330C00950C64 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +100,11 @@
 		5C46FC132C61EBFB00950C64 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5C46FBF92C60CCC700950C64 /* ViewController.swift */,
-				5C46FC0B2C60E0D400950C64 /* CustomCollectionViewCell.swift */,
 				5C46FC092C60CD8B00950C64 /* TitleView.swift */,
+				5C46FC0B2C60E0D400950C64 /* CustomCollectionViewCell.swift */,
 				5C46FC142C61F2DD00950C64 /* CustomView.swift */,
+				5C46FBF92C60CCC700950C64 /* ViewController.swift */,
+				5C46FC162C63330C00950C64 /* BackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C46FC172C63330C00950C64 /* BackgroundView.swift in Sources */,
 				5C46FC0E2C61EB8900950C64 /* MovieModel.swift in Sources */,
 				5C46FC152C61F2DD00950C64 /* CustomView.swift in Sources */,
 				5C46FBFA2C60CCC700950C64 /* ViewController.swift in Sources */,
